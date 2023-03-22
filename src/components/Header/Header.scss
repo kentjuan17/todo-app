@@ -1,0 +1,46 @@
+@import "./../../styles/variables.scss";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-secondary-color;
+  margin: 0.5rem 0;
+
+  .title {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: $title-font;
+    font-weight: bold;
+
+    svg {
+      margin: 0 0.5rem;
+    }
+
+    @include breakpoint-medium {
+      font-size: 2rem;
+    }
+
+    @include breakpoint-large {
+      font-size: 2.5rem;
+    }
+  }
+
+  .author {
+    font-style: italic;
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+
+    @include breakpoint-medium {
+      font-size: 0.8rem;
+    }
+
+    @include breakpoint-large {
+      font-size: 1rem;
+    }
+  }
+}

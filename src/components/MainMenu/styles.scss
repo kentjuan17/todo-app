@@ -1,0 +1,36 @@
+@import "./../../styles/variables.scss";
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    color: $text-secondary-color;
+    background-color: $primary-color;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+
+    &:first-child {
+      border-radius: 9px 0 0 9px;
+    }
+
+    &:last-child {
+      border-radius: 0 9px 9px 0;
+    }
+
+    &.active {
+      background-color: $background-color;
+      color: $text-color;
+    }
+
+    &:hover {
+      background-color: $border-dark-color;
+      color: $text-secondary-color;
+    }
+  }
+}

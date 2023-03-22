@@ -1,0 +1,16 @@
+@import "./styles/variables.scss";
+
+div.App {
+  background: $background;
+  background: $linear-background;
+  flex: 1;
+
+  div.empty-list {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-secondary-color;
+    font-style: italic;
+  }
+}

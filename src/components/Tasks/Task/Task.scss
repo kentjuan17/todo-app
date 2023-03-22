@@ -1,0 +1,78 @@
+@import "./../../../styles/variables.scss";
+
+div.task {
+  @include curved-corner-window {
+    position: relative;
+
+    .close {
+      @include icon-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        &:hover {
+          color: $border-dark-color;
+        }
+      }
+    }
+
+    .description {
+      @include title-style;
+    }
+
+    .id {
+      font-size: 0.8rem;
+      font-weight: 200;
+      text-align: start;
+    }
+
+    .status {
+      margin: 0.5rem 0;
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+
+        &.completed {
+          color: $success-color;
+        }
+
+        &.open {
+          color: $danger-color;
+        }
+      }
+    }
+
+    .change-status {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 0.3rem;
+
+      button {
+        @include icon-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            color: $border-dark-color;
+          }
+        }
+      }
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    // Breakpoints
+    @include breakpoint-medium {
+      width: calc(50% - 4rem);
+    }
+
+    @include breakpoint-large {
+      width: calc(33% - 4rem);
+    }
+  }
+}

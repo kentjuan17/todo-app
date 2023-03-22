@@ -1,0 +1,66 @@
+@import "./../../styles/variables.scss";
+
+.help-page {
+  aside {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      padding: 0.8rem;
+      color: $text-secondary-color;
+      background-color: $primary-color;
+      font-size: 0.8rem;
+      text-align: center;
+      justify-content: center;
+      text-decoration: none;
+
+      &:first-child {
+        border-radius: 9px 0 0 9px;
+      }
+
+      &:last-child {
+        border-radius: 0 9px 9px 0;
+      }
+
+      &.active {
+        background-color: $background-color;
+        color: $text-color;
+      }
+
+      &:hover {
+        background-color: $border-dark-color;
+        color: $text-secondary-color;
+      }
+
+      @include breakpoint-medium {
+        font-size: 1rem;
+      }
+
+      @include breakpoint-large {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  article {
+    @include curved-corner-window {
+      h2 {
+        font-family: $title-font;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .warning {
+        color: $danger-color;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}

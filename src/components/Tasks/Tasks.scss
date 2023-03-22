@@ -1,0 +1,40 @@
+@import "./../../styles/variables.scss";
+
+main.task-list {
+  .clear-task {
+    @include icon-button;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+
+    svg {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      color: $border-light-color;
+    }
+  }
+
+  .empty-list {
+    justify-content: center;
+    margin: 0.3rem auto;
+  }
+
+  @include breakpoint-medium {
+    .clear-task {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint-large {
+    .clear-task {
+      width: 100%;
+    }
+  }
+}

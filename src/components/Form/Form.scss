@@ -1,0 +1,72 @@
+@import "./../../styles/variables.scss";
+
+form.task-form-window {
+  @include curved-corner-window {
+    text-align: center;
+    width: 300px;
+    margin: 1rem auto 0;
+
+    div.task-form-title {
+      @include title-style;
+    }
+
+    div.task-form {
+      div.task-form-fields {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          display: flex;
+          align-items: center;
+          margin: 0.3rem 0;
+          width: 100%;
+
+          span {
+            width: calc(38% - 0.3rem);
+            margin-right: 0.3rem;
+            text-align: right;
+          }
+
+          input,
+          select {
+            width: 60%;
+            padding: 0.3rem;
+          }
+        }
+      }
+
+      button {
+        @include button-style {
+          svg {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+
+    .error-message {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: $danger-color;
+      margin: 0.5rem auto;
+    }
+
+    // Breakpoints
+    @include breakpoint-medium {
+      width: 420px;
+
+      .task-form-title {
+        width: 100%;
+      }
+
+      .task-form {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    @include breakpoint-large {
+      width: 480px;
+    }
+  }
+}
